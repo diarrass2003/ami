@@ -1,0 +1,125 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonne Année à mes Amis et Parents 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Musique -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="https://www.youtube.com/watch?v=e_FUiawKbr0&list=RDe_FUiawKbr0&start_radio=1" type="audio/mpeg">
+    </audio>
+
+    <!-- Contrôle musique -->
+    <div class="music-control">
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <!-- Effets -->
+    <div class="snowflakes"></div>
+    <div class="hearts"></div>
+    <canvas id="fireworks"></canvas>
+    <div class="sparkles"></div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>🎆 Bonne Année <span id="year"></span> 🎆</h1>
+                <div class="decoration">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <p class="message">
+                    À vous <strong id="name">Mes Amis et Parents 👨‍👩‍👧‍👦❤️</strong>
+                </p>
+
+                <div class="romantic-box">
+                    <p class="romantic">
+                        Que cette nouvelle année nous apporte<br>
+                        <span class="emoji-group">
+                            <span class="emoji-item">❤️ Amour</span>
+                            <span class="emoji-item">🤍 Paix</span>
+                            <span class="emoji-item">🌟 Réussite</span>
+                            <span class="emoji-item">🏆 Succès</span>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="countdown-container">
+                    <h2>Temps restant avant le Nouvel An</h2>
+                    <div id="countdown" class="countdown">
+                        <div class="time-box">
+                            <span class="time-value" id="days">00</span>
+                            <span class="time-label">Jours</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" id="hours">00</span>
+                            <span class="time-label">Heures</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" id="minutes">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" id="seconds">00</span>
+                            <span class="time-label">Secondes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="showMessage()" class="btn-primary">
+                        <i class="fas fa-gift"></i> Message Spécial
+                    </button>
+                    <button onclick="changeTheme()" class="btn-secondary">
+                        <i class="fas fa-palette"></i> Changer le thème
+                    </button>
+                </div>
+
+                <div id="specialMessage" class="hidden message-box">
+                    <div class="message-header">
+                        <i class="fas fa-quote-left"></i>
+                        <h3>Mes vœux pour vous</h3>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>🙏 Que Dieu vous bénisse abondamment.</p>
+                        <p>Qu'Il éclaire vos pas, protège vos familles,<br>
+                        et vous accorde la santé, paix et prospérité Succès.</p>
+                        <div class="love-message">
+                            <i class="fas fa-heart"></i>
+                            <p>À mes amis et parents, vous êtes ma plus belle bénédiction.</p>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="cheers">🥂 Bonne et Heureuse Année à vous tous !</p>
+                    </div>
+                    <button onclick="shareWishes()" class="btn-share">
+                        <i class="fas fa-share-alt"></i> Partager mes vœux
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <p>Créé avec <i class="fas fa-heart pulse"></i> pour vous par<STRONG> Diarrassouba Yassoungo Youssouf</STRONG>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confettis -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
